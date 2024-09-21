@@ -1,0 +1,18 @@
+[1]
+測試句：['到底是誰會來都不知道']
+interrogative wh checker：[True]
+existential wh checker：[False]
+universal wh checker：[False]
+=======================================================================================================================================
+[2]
+測試句：['你都不理誰']
+interrogative wh checker：[True]
+existential wh checker：[False]
+universal wh checker：[False]
+=======================================================================================================================================
+[3]
+測試句：['你誰都不理']
+interrogative wh checker：[False]
+existential wh checker：[False]
+universal wh checker：[True]
+=======================================================================================================================================

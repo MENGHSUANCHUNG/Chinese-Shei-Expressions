@@ -1,0 +1,227 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v271",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_asNoun": [
+            "久旺",
+            "也許",
+            "勝負",
+            "古昔",
+            "奧會",
+            "小孩",
+            "彷彿",
+            "溫床",
+            "詩",
+            "道理",
+            "鏡頭"
+        ]
+    },
+    "utterance": {
+        "你怪誰": {
+            "id": "6f3c0766-7de1-454e-991e-01450bc74292",
+            "pos": "<ENTITY_pronoun>你</ENTITY_pronoun><MODIFIER>怪</MODIFIER><CLAUSE_WhoQ>誰</CLAUSE_WhoQ>",
+            "lexy": [],
+            "pattern": "<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)><CLAUSE_WhoQ>誰</CLAUSE_WhoQ>"
+        },
+        "誰狠心": {
+            "id": "a996a40a-73f7-42fa-9736-2e5eb0495099",
+            "pos": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ENTITY_nouny>狠心</ENTITY_nouny>",
+            "lexy": [],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "誰不要臉": {
+            "id": "e1d55ca7-c6f6-4827-a839-612dc9adb128",
+            "pos": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_negation>不要</FUNC_negation><ENTITY_nouny>臉</ENTITY_nouny>",
+            "lexy": [],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_negation>[^<]+</FUNC_negation>"
+        },
+        "誰先誰後": {
+            "id": "133d2f72-d4fd-450a-9b7d-5072c5958eab",
+            "pos": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODIFIER>先</MODIFIER><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><RANGE_locality>後</RANGE_locality>",
+            "lexy": [],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><RANGE_(locality|period)>[^<]+</RANGE_(locality|period)>"
+        },
+        "你寫給誰呢": {
+            "id": "9f802624-c6d3-4574-a84a-6c004dca0c62",
+            "pos": "<ENTITY_pronoun>你</ENTITY_pronoun><ACTION_verb>寫</ACTION_verb><ACTION_verb>給</ACTION_verb><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><CLAUSE_particle>呢</CLAUSE_particle>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(寫|寫出|寫了|寫下|撰寫|書寫|寫成|寫字|寫完|寫著|編寫)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給|供給|帶給|提供|發放|資助|給對|分給|留給|交給|送給)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>(.+)?<CLAUSE_particle>[^<嗎吧]+</CLAUSE_particle>"
+        },
+        "幸運者是誰": {
+            "id": "e5456f1f-5d45-4230-8417-f124a3c297c3",
+            "pos": "<ENTITY_nouny>幸運者</ENTITY_nouny><AUX>是</AUX><CLAUSE_WhoQ>誰</CLAUSE_WhoQ>",
+            "lexy": [],
+            "pattern": "<AUX>(像|為|是|就是)</AUX><CLAUSE_WhoQ>誰</CLAUSE_WhoQ>"
+        },
+        "誰是高人呢": {
+            "id": "0dbb6107-6d5d-4a39-ab06-113f3a480d63",
+            "pos": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><AUX>是</AUX><ENTITY_nouny>高人</ENTITY_nouny><CLAUSE_particle>呢</CLAUSE_particle>",
+            "lexy": [],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><AUX>[^<就]+</AUX>"
+        },
+        "誰比較恐怖": {
+            "id": "bf5aa857-f507-4d82-838f-712f011022a4",
+            "pos": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><DegreeP>比較恐怖</DegreeP>",
+            "lexy": [],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><DegreeP>[^<]+</DegreeP>"
+        },
+        "誰爸爸有錢": {
+            "id": "17b1da54-e1d8-4d54-b946-821d58df0841",
+            "pos": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ENTITY_pronoun>爸爸</ENTITY_pronoun><MODIFIER>有錢</MODIFIER>",
+            "lexy": [],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>(<FUNC_inner>的</FUNC_inner>)?(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>"
+        },
+        "誰跟誰求婚": {
+            "id": "75ebeabb-52d7-4169-9390-924a572a48d3",
+            "pos": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_conjunction>跟</FUNC_conjunction><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ACTION_verb>求婚</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(求婚|提婚|倡導|提出|告白|提親|求愛|表白|搭訕|討教|道謝)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_conjunction>[^<]+</FUNC_conjunction>(<(UserDefined|ENTITY_(pronoun|nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(pronoun|nounHead|nouny|noun|oov))>|<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>)"
+        },
+        "不論誰是誰非": {
+            "id": "60738c20-a618-485a-8fdd-c636105e2f22",
+            "pos": "<FUNC_inter>不論</FUNC_inter><IDIOM>誰是誰非</IDIOM>",
+            "lexy": [],
+            "pattern": "<IDIOM>誰[^<]+誰[^<]+</IDIOM>"
+        },
+        "看誰能給得更多": {
+            "id": "f36ab4e6-69e1-474d-b85e-cc5f75ccf96d",
+            "pos": "<ACTION_verb>看</ACTION_verb><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODAL>能</MODAL><ACTION_verb>給</ACTION_verb><FUNC_inner>得</FUNC_inner><DegreeP>更多</DegreeP>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(看|探看|收看|看守|看戲|看望|看護|看顧|觀看|光顧|探望)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給|供給|帶給|提供|發放|資助|給對|分給|留給|交給|送給)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODAL>[^<]+</MODAL>"
+        },
+        "誰在醫學院屋頂": {
+            "id": "f4ff6856-ed62-4830-a484-27e7785e1627",
+            "pos": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_inner>在</FUNC_inner><ENTITY_noun>醫學院</ENTITY_noun><ENTITY_nounHead>屋頂</ENTITY_nounHead>",
+            "lexy": [],
+            "pattern": "<CLAUSE_WhoQ>[^<]+</CLAUSE_WhoQ>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>醫學院</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>屋頂</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "談判雙方誰在上風": {
+            "id": "e02f2a17-a4f4-4bcc-a80f-253626704c6c",
+            "pos": "<ACTION_verb>談判</ACTION_verb><MODIFIER>雙方</MODIFIER><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_inner>在</FUNC_inner><RANGE_locality>上</RANGE_locality><ENTITY_oov>風</ENTITY_oov>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(談判|交涉|協議|磋商|會面|和談|會談|會晤|調停|斡旋|協商)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_inner>在</FUNC_inner><RANGE_(locality|period)>[^<]+</RANGE_(locality|period)>"
+        },
+        "我們誰又不是邁向歸途": {
+            "id": "a4b94375-86f6-4b3c-891e-822b50504170",
+            "pos": "<ENTITY_pronoun>我們</ENTITY_pronoun><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_inner>又</FUNC_inner><FUNC_negation>不</FUNC_negation><AUX>是</AUX><ACTION_verb>邁向</ACTION_verb><ENTITY_nouny>歸途</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(邁向|邁進|跨出|開創|邁入|邁向了|步入|邁出|踏出|邁開|開啟了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_inner>(又|還)</FUNC_inner>"
+        },
+        "我想知道誰都考第一名": {
+            "id": "017f4d82-21e1-490f-b633-dc9cbf6890fa",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><ACTION_verb>想</ACTION_verb><ACTION_verb>知道</ACTION_verb><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><QUANTIFIER>都</QUANTIFIER><ACTION_verb>考</ACTION_verb><ENTITY_DetPhrase>第一名</ENTITY_DetPhrase>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想|假想|冥想|回想|想像|想出|想到|想念|想拿|想望|想要)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(知道|得知|明知|深知|獲知|知悉|知情|知曉|知足|確知|了解)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(考|考驗|實驗|檢測|檢驗|測試|測驗|試作|試種|試驗|考試)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<(ACTION_verb|VerbP)>想</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>(知道|知)</(ACTION_verb|VerbP)><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><QUANTIFIER>都</QUANTIFIER>"
+        },
+        "究竟是其中誰的貢獻了": {
+            "id": "c99f207e-e32e-4df1-be0d-72a81b0e46fe",
+            "pos": "<MODIFIER>究竟</MODIFIER><AUX>是</AUX><FUNC_inner>其中</FUNC_inner><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_inner>的</FUNC_inner><VerbP>貢獻了</VerbP>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(貢獻了|奉獻|捐獻|獻出|獻身|供給|協助|捐贈|提供|補給|資助)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_inner>的</FUNC_inner>"
+        },
+        "要不然誰把你Ｆｉｒｅ": {
+            "id": "647234ea-400f-45b2-8168-610685e04309",
+            "pos": "<ACTION_verb>要</ACTION_verb><FUNC_inter>不然</FUNC_inter><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ACTION_lightVerb>把</ACTION_lightVerb><ENTITY_pronoun>你</ENTITY_pronoun><ENTITY_oov>Ｆｉｒｅ</ENTITY_oov>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|餓了|得照|需|更要)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ACTION_lightVerb>[^<]+</ACTION_lightVerb>"
+        },
+        "還有誰會來買本國的產品": {
+            "id": "8b443d12-5092-4558-8790-bf799b665843",
+            "pos": "<FUNC_conjunction>還有</FUNC_conjunction><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODAL>會</MODAL><ACTION_verb>來</ACTION_verb><ACTION_verb>買</ACTION_verb><ENTITY_nouny>本國</ENTITY_nouny><FUNC_inner>的</FUNC_inner><ENTITY_noun>產品</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(來|上來|下來|來到|前來|回來|進來|來語|端來|出來|值來)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(買|採買|收買|買進|購買|採辦|購得|買到|買不到|買東西|吃)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_conjunction>還有</FUNC_conjunction>(<ENTITY_nouny>誰</ENTITY_nouny>|<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>)"
+        },
+        "那這樣你怎麼知道誰在愛你": {
+            "id": "062f6c47-0a46-4c13-bec6-d6844ea13e25",
+            "pos": "<FUNC_determiner>那</FUNC_determiner><ENTITY_DetPhrase>這樣</ENTITY_DetPhrase><ENTITY_pronoun>你</ENTITY_pronoun><CLAUSE_HowQ>怎麼</CLAUSE_HowQ><ACTION_verb>知道</ACTION_verb><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ASPECT>在</ASPECT><ACTION_verb>愛</ACTION_verb><ENTITY_pronoun>你</ENTITY_pronoun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(知道|得知|明知|深知|獲知|知悉|知情|知曉|知足|確知|了解)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(愛|喜愛|愛好|愛憎|愛戴|愛護|愛過|憐愛|深愛|熱愛|疼愛)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ASPECT>在</ASPECT><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>"
+        },
+        "未來又由誰來決定接班的人呢": {
+            "id": "0f32411d-2e2d-4cef-9bc2-055f9f170757",
+            "pos": "<TIME_justtime>未來</TIME_justtime><FUNC_inner>又</FUNC_inner><FUNC_inner>由</FUNC_inner><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ACTION_verb>來</ACTION_verb><ACTION_verb>決定</ACTION_verb><ACTION_verb>接班</ACTION_verb><FUNC_inner>的</FUNC_inner><ENTITY_noun>人</ENTITY_noun><CLAUSE_particle>呢</CLAUSE_particle>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(來|上來|下來|來到|前來|回來|進來|值來|性來|出來|去)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(決定|判定|商定|敲定|斷定|決策|約定|解決|談定|酌定|判斷)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(接班|接下|接下來|接住|接到|接受|接手|接掌|接收|接替|接案)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_conjunction>)<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>((?!.誰.).)*(<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)+"
+        },
+        "票投給誰只有天知、地知、我知": {
+            "id": "4d74ffd0-0efc-4f88-87e1-7847b5689b76",
+            "pos": "<ENTITY_nounHead>票</ENTITY_nounHead><ACTION_verb>投給</ACTION_verb><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODIFIER>只有</MODIFIER><ENTITY_nouny>天</ENTITY_nouny><ACTION_verb>知</ACTION_verb><ENTITY_oov>地</ENTITY_oov><ACTION_verb>知</ACTION_verb><ENTITY_pronoun>我</ENTITY_pronoun><ACTION_verb>知</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(投給|投給了|選出來|換掉|大贏|投下去|讓給|想投|幹掉|當選了|當選)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(知|明知|深知|知悉|知情|知曉|知足|知道|確知|了解|懂得)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<QUANTIFIER>都</QUANTIFIER>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>(<RANGE_(locality|period)>[^<]+</RANGE_(locality|period)>)?(<FUNC_inner>(向|於)</FUNC_inner>)?<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>"
+        },
+        "所以它到底是誰在說什麼故事給誰聽": {
+            "id": "1eb61a62-50b1-4ecc-bf31-f585982ef5f7",
+            "pos": "<FUNC_inter>所以</FUNC_inter><ENTITY_pronoun>它</ENTITY_pronoun><FUNC_inner>到底</FUNC_inner><AUX>是</AUX><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ASPECT>在</ASPECT><ACTION_verb>說</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ><ENTITY_noun>故事</ENTITY_noun><ACTION_verb>給</ACTION_verb><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ACTION_verb>聽</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(說|演說|說話|宣判|拼讀|談到|辯護|說過|說到|講出|說著)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給|供給|帶給|提供|發放|資助|給老|交給|留給|給聖|分給)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(聽|判處|嗔怨|嚴斥|指斥|聲討|聽著|聽老|傷假|聽完|視兒)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_in(ner|ter)>到底</FUNC_in(ner|ter)>(<AUX>[^<]+</AUX>)?<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>(.+)?"
+        },
+        "不論發生在何時、何地、針對何人、由誰所為": {
+            "id": "8bddc66c-f730-45fd-ab4f-9175cdaf0498",
+            "pos": "<FUNC_inter>不論</FUNC_inter><ACTION_verb>發生</ACTION_verb><FUNC_inner>在</FUNC_inner><CLAUSE_WhenQ>何時</CLAUSE_WhenQ><ENTITY_oov>何地</ENTITY_oov><ACTION_verb>針對</ACTION_verb><CLAUSE_WhoQ>何</CLAUSE_WhoQ><ENTITY_noun>人</ENTITY_noun><FUNC_inner>由</FUNC_inner><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_inner>所</FUNC_inner><AUX>為</AUX>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(發生|出生|來到|到來|到達|抵達|案發|發生了|遭遇|遭逢|爆發)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(針對|對焦|專注|有關|依據|根據|因應|依照|關注|調查|探討)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_inner>由</FUNC_inner><CLAUSE_WhoQ>誰</CLAUSE_WhoQ>(<FUNC_inner>所</FUNC_inner>)?"
+        },
+        "現在誰還有農業時代那麼好的耐心和浪漫情懷": {
+            "id": "d098dfed-4586-4629-ae1a-c869fcf3070a",
+            "pos": "<TIME_justtime>現在</TIME_justtime><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_conjunction>還有</FUNC_conjunction><ENTITY_noun>農業</ENTITY_noun><ENTITY_noun>時代</ENTITY_noun><FUNC_degreeHead>那麼</FUNC_degreeHead><FUNC_degreeHead>好</FUNC_degreeHead><FUNC_inner>的</FUNC_inner><ENTITY_nouny>耐心</ENTITY_nouny><FUNC_conjunction>和</FUNC_conjunction><MODIFIER>浪漫</MODIFIER><ENTITY_nounHead>情懷</ENTITY_nounHead>",
+            "lexy": [],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_conjunction>還有</FUNC_conjunction>"
+        },
+        "或是沒有能力去判斷候選人的政策究竟誰好誰壞": {
+            "id": "4a857397-401e-4885-aaf4-3bddba3e184b",
+            "pos": "<FUNC_conjunction>或是</FUNC_conjunction><FUNC_negation>沒有</FUNC_negation><ENTITY_nounHead>能力</ENTITY_nounHead><ACTION_verb>去</ACTION_verb><ACTION_verb>判斷</ACTION_verb><ENTITY_nouny>候選人</ENTITY_nouny><FUNC_inner>的</FUNC_inner><ENTITY_noun>政策</ENTITY_noun><MODIFIER>究竟</MODIFIER><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_degreeHead>好</FUNC_degreeHead><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODIFIER>壞</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(去|要去|回去|想去|去了|跑去|回來|跑來|趕去|出去|來)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(判斷|判定|判決|斷定|研判|裁判|裁斷|評判|評斷|論斷|定奪)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_conjunction>[^<]+</FUNC_conjunction><FUNC_negation>[^<]+</FUNC_negation><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>能力</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>去</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>判斷</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>候選人</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>政策</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<CLAUSE_WhoQ>[^<]+</CLAUSE_WhoQ><FUNC_degreeHead>[^<]+</FUNC_degreeHead><CLAUSE_WhoQ>[^<]+</CLAUSE_WhoQ>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

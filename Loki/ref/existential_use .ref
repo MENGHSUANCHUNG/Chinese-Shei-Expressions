@@ -1,0 +1,84 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v268",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_asNoun": [
+            "久旺",
+            "也許",
+            "勝負",
+            "古昔",
+            "奧會",
+            "小孩",
+            "彷彿",
+            "溫床",
+            "詩",
+            "道理",
+            "鏡頭"
+        ]
+    },
+    "utterance": {
+        "那個誰呀": {
+            "id": "2fe3cf0c-350c-48c5-9e5f-35c3b0b46432",
+            "pos": "<ENTITY_DetPhrase>那個</ENTITY_DetPhrase><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><CLAUSE_particle>呀</CLAUSE_particle>",
+            "lexy": [],
+            "pattern": "(<ENTITY_DetPhrase>[^<]+</ENTITY_DetPhrase>|<FUNC_determiner>[^<]+</FUNC_determiner>)<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>"
+        },
+        "彷彿生著誰的氣": {
+            "id": "25c0f0af-596e-498e-835d-ae6669a7695c",
+            "pos": "<UserDefined>彷彿</UserDefined><ENTITY_oov>生</ENTITY_oov><ASPECT>著</ASPECT><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_inner>的</FUNC_inner><ENTITY_nouny>氣</ENTITY_nouny>",
+            "lexy": [],
+            "pattern": "(<FUNC_inter>(假如|如果)</FUNC_inter>|<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>彷彿</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>|<DegreeP>好像</DegreeP>|<AUX>像[^<]+</AUX>)(.+)?<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>"
+        },
+        "只要我是人家的誰": {
+            "id": "be24083b-77f6-4f46-87e1-d76cf19ea778",
+            "pos": "<MODIFIER>只</MODIFIER><ACTION_verb>要</ACTION_verb><ENTITY_pronoun>我</ENTITY_pronoun><AUX>是</AUX><ENTITY_pronoun>人家</ENTITY_pronoun><FUNC_inner>的</FUNC_inner><CLAUSE_WhoQ>誰</CLAUSE_WhoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|餓了|得照|需|更要)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_inner>的</FUNC_inner><CLAUSE_WhoQ>誰</CLAUSE_WhoQ>"
+        },
+        "或者說誰誰誰不好": {
+            "id": "56c2a118-e184-4453-8c9b-7dc2ed560b14",
+            "pos": "<FUNC_conjunction>或者</FUNC_conjunction><ACTION_verb>說</ACTION_verb><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_negation>不</FUNC_negation><MODIFIER>好</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(說|演說|說話|宣判|拼讀|談到|辯護|說過|說到|講出|說著)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>){3}"
+        },
+        "所以我記得是誰呀": {
+            "id": "df4c37c5-acc5-4fa4-abe4-1fb6b6d934ba",
+            "pos": "<FUNC_inter>所以</FUNC_inter><ENTITY_pronoun>我</ENTITY_pronoun><ACTION_verb>記得</ACTION_verb><AUX>是</AUX><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><CLAUSE_particle>呀</CLAUSE_particle>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(記得|懂得|曉得|死記|熟記|牢記|記住|認得|謹記|識得|了解)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>(<AUX>是</AUX>)?(<ENTITY_DetPhrase>那個</ENTITY_DetPhrase>|<FUNC_determiner>那</FUNC_determiner>)?<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>(<FUNC_inner>的</FUNC_inner><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<CLAUSE_particle>呀</CLAUSE_particle>)"
+        },
+        "沒有誰注意我存在": {
+            "id": "4f6757e8-7f8e-4731-9cc7-e348b67d8044",
+            "pos": "<FUNC_negation>沒有</FUNC_negation><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ACTION_verb>注意</ACTION_verb><ENTITY_pronoun>我</ENTITY_pronoun><ACTION_verb>存在</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(注意|在意|關注|伴隨|侍奉|傾聽|參加|定期去|照看|照顧|監聽)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(存在|存有|存活|生存|具有|存在過|存在著|存在了|含有|帶有|等價)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><CLAUSE_WhoQ>誰</CLAUSE_WhoQ>"
+        },
+        "可曾看到有誰去辦誰": {
+            "id": "1b22f642-fa0d-42b0-b0a7-e240a5f370c2",
+            "pos": "<MODAL>可</MODAL><ASPECT>曾</ASPECT><ACTION_verb>看到</ACTION_verb><ACTION_verb>有</ACTION_verb><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ACTION_verb>去</ACTION_verb><ACTION_verb>辦</ACTION_verb><CLAUSE_WhoQ>誰</CLAUSE_WhoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(看到|看見|見到|睇見|瞅見|瞧見|看過|看到了|聽到|聽見|看著)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(去|要去|回去|想去|去了|跑去|回來|跑來|趕去|出去|來)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(辦|籌辦|承辦|舉辦|主辦|辦了|辦過|辦副|辦說|辦理|合辦)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<MODAL>可</MODAL><ASPECT>曾</ASPECT>|<CLAUSE_AnotAQ>是否</CLAUSE_AnotAQ>)(<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)*?<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

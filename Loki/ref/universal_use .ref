@@ -1,0 +1,169 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v268",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_asNoun": [
+            "久旺",
+            "也許",
+            "勝負",
+            "古昔",
+            "奧會",
+            "小孩",
+            "彷彿",
+            "溫床",
+            "詩",
+            "道理",
+            "鏡頭"
+        ]
+    },
+    "utterance": {
+        "無論誰當權": {
+            "id": "4750d2ab-e478-4ae2-a878-1a30775f4422",
+            "pos": "<MODIFIER>無論</MODIFIER><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ACTION_verb>當權</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(當權|疑歐|攘夷|當政|掌權|得勢|急進|失勢|專擅|亂政)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<FUNC_inter>不論</FUNC_inter>|<MODIFIER>無論</MODIFIER>)(<AUX>是</AUX>|<ACTION_verb>[^<]+</ACTION_verb>)?<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>"
+        },
+        "誰也不敢動": {
+            "id": "15067f8b-a5da-4990-bda8-ad391a7e88a0",
+            "pos": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODIFIER>也</MODIFIER><FUNC_negation>不</FUNC_negation><ACTION_verb>敢</ACTION_verb><ACTION_verb>動</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(敢|敢做|敢為|願意|忍心|容|許|敢過|願|捨得|吝於)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(動|動性|新動|溜放|動等|動亦|去產|大動|作動|驅動|費功)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODIFIER>也</MODIFIER>((?<!</FUNC_negation>)<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)?(<MODIFIER>不大</MODIFIER>|<FUNC_negation>[^<]+</FUNC_negation>)"
+        },
+        "誰也聽不懂": {
+            "id": "341adaca-0354-4ba6-902c-2dfd7ae84519",
+            "pos": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODIFIER>也</MODIFIER><ACTION_verb>聽不懂</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(聽不懂|看不懂|聽得懂|記不住|記不起來|聽不到|忘記了|看得懂|懂|想不出|忘記)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODIFIER>也</MODIFIER><(ACTION_verb|VerbP)>[^<]+不[^<]+</(ACTION_verb|VerbP)>"
+        },
+        "誰也難討好": {
+            "id": "ffdfb358-b969-4dc0-a52d-78a7f41490fa",
+            "pos": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODIFIER>也</MODIFIER><MODIFIER>難</MODIFIER><ACTION_verb>討好</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(討好|巴結|趨附|逢迎|服氣|怕苦|服輸|屑|討喜|怯場|講理)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><(MODIFIER|ModifierP)>也</(MODIFIER|ModifierP)><(MODIFIER|ModifierP)>難</(MODIFIER|ModifierP)>"
+        },
+        "誰也說不上來": {
+            "id": "1d1e2ab4-beeb-48e4-894b-c3dfec2e264a",
+            "pos": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODIFIER>也</MODIFIER><IDIOM>說不上來</IDIOM>",
+            "lexy": [],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODIFIER>也</MODIFIER><IDIOM>[^<]+不[^<]+</IDIOM>"
+        },
+        "誰再出聲便處分誰": {
+            "id": "2e0c5020-91d2-418e-8956-3bbb0d5fbdc7",
+            "pos": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODIFIER>再</MODIFIER><ACTION_verb>出聲</ACTION_verb><MODAL>便</MODAL><ACTION_verb>處分</ACTION_verb><CLAUSE_WhoQ>誰</CLAUSE_WhoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(出聲|吭聲|發聲|聲明|亂說|亂講|交談|作出|做出|叨嘮|商量)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(處分|懲處|處治|處理|處置|處罰|制裁|懲治|懲罰|懲辦|教養)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>(.+)?(<MODAL>便</MODAL>|<FUNC_inner>就</FUNC_inner>)(<ACTION_verb>[^<]+</ACTION_verb>|<ACTION_lightVerb>[^<]+</ACTION_lightVerb>)+<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>"
+        },
+        "老實說誰都綑不住我": {
+            "id": "c74ac014-a894-469b-b39f-94c5abb65b83",
+            "pos": "<MODIFIER>老實</MODIFIER><ACTION_verb>說</ACTION_verb><ENTITY_nouny>誰</ENTITY_nouny><MODIFIER>都綑</MODIFIER><FUNC_negation>不</FUNC_negation><ACTION_verb>住</ACTION_verb><ENTITY_pronoun>我</ENTITY_pronoun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(說|演說|說話|宣判|拼讀|談到|辯護|說真|有說|講出|說過)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(住|居住|獨處|生存|生活|討生活|過活|住下|同住|暫住|租住)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<ENTITY_nouny>誰</ENTITY_nouny>(<(MODIFIER|ModifierP)>都[^<]+</(MODIFIER|ModifierP)>)?<FUNC_negation>不</FUNC_negation><(ACTION_verb|VerbP)>住</(ACTION_verb|VerbP)>"
+        },
+        "選誰來做都一樣可行": {
+            "id": "46bc1276-4b93-48d4-b992-071b8b7e023e",
+            "pos": "<ACTION_verb>選</ACTION_verb><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ACTION_verb>來</ACTION_verb><ACTION_verb>做</ACTION_verb><QUANTIFIER>都</QUANTIFIER><DegreeP>一樣可行</DegreeP>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(選|任選|挑選|遴選|選取|選定|選用|取捨|到選|選中|看選)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(來|上來|下來|來到|前來|回來|進來|來語|端來|出來|值來)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(做|作用|假作|假裝|冒充|創作|創造|喬裝|孕育|攝製|生出)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_nouny>那誰</ENTITY_nouny>|<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>|<ENTITY_oov>誰</ENTITY_oov>|<ENTITY_nounHead>誰</ENTITY_nounHead>|<ENTITY_nouny>誰</ENTITY_nouny>)(.+)?(?!<MODAL>)<QUANTIFIER>(都|皆)</QUANTIFIER>"
+        },
+        "再也沒有誰能聽得到了": {
+            "id": "e13b2f25-89d2-4c8f-847c-b6eba7bdc0b2",
+            "pos": "<MODIFIER>再</MODIFIER><MODIFIER>也</MODIFIER><FUNC_negation>沒有</FUNC_negation><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODAL>能</MODAL><ACTION_verb>聽</ACTION_verb><FUNC_inner>得</FUNC_inner><VerbP>到了</VerbP>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(聽|判處|嗔怨|嚴斥|指斥|聲討|聽著|聽老|傷假|聽完|視兒)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到了|到|到約|來到|來到了|到達了|到離|到為了|到臨|走到了|跑到)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(MODIFIER|ModifierP)>再</(MODIFIER|ModifierP)><(MODIFIER|ModifierP)>也</(MODIFIER|ModifierP)><FUNC_negation>[^<]+</FUNC_negation><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODAL>[^<]+</MODAL>"
+        },
+        "誰做好公民誰就是傻瓜": {
+            "id": "4efb6ea0-e198-41af-84a0-a7d8d375f674",
+            "pos": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ACTION_verb>做</ACTION_verb><ENTITY_nouny>好公民</ENTITY_nouny><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><AUX>就是</AUX><ENTITY_nouny>傻瓜</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(做|作用|假作|假裝|冒充|創作|創造|喬裝|孕育|攝製|生出)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>(.+)?<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>(<MODAL>便</MODAL><AUX>是</AUX>|<AUX>就是</AUX>)"
+        },
+        "半夜誰起來就順便看一下": {
+            "id": "346321d5-ceda-4147-9f02-1929695a2282",
+            "pos": "<TIME_day>半夜</TIME_day><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ACTION_verb>起來</ACTION_verb><FUNC_inner>就</FUNC_inner><MODIFIER>順便</MODIFIER><ACTION_verb>看</ACTION_verb><ENTITY_num>一</ENTITY_num><ENTITY_oov>下</ENTITY_oov>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(起來|起來了|下來|開來|出來|拉出來|弄得|拿出來|變成|出去|動到)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(看|探看|收看|看守|看戲|看望|看護|看顧|觀看|光顧|探望)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>[^說知道知到知叫教]+(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>|<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>)?<FUNC_in(ner|ter)>就</FUNC_in(ner|ter)>"
+        },
+        "只要誰說有效我就帶他去": {
+            "id": "6432a2fe-70c8-4016-91d5-c649d1028402",
+            "pos": "<MODIFIER>只</MODIFIER><ACTION_verb>要</ACTION_verb><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ACTION_verb>說</ACTION_verb><MODIFIER>有效</MODIFIER><ENTITY_pronoun>我</ENTITY_pronoun><FUNC_inner>就</FUNC_inner><ACTION_verb>帶</ACTION_verb><ENTITY_pronoun>他</ENTITY_pronoun><ACTION_verb>去</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|真要|得照|更要|要去)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(說|演說|說話|宣判|拼讀|談到|辯護|說真|有說|講出|說過)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(帶|佩帶|夾帶|帶病|帶走|挾帶|攜帶|隨帶|佩戴|承接|披掛)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(去|要去|回去|想去|去了|跑去|回來|跑來|趕去|出去|來)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<MODIFIER>只</MODIFIER><ACTION_verb>要</ACTION_verb><CLAUSE_WhoQ>誰</CLAUSE_WhoQ>(.+)?(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>|<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>)?<FUNC_inner>就</FUNC_inner>"
+        },
+        "換了我們誰也會這樣做的": {
+            "id": "3a1b3758-add4-4e86-b7b5-ce7bfc2c0417",
+            "pos": "<VerbP>換了</VerbP><ENTITY_pronoun>我們</ENTITY_pronoun><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODIFIER>也</MODIFIER><MODAL>會</MODAL><ENTITY_DetPhrase>這樣</ENTITY_DetPhrase><ACTION_verb>做</ACTION_verb><FUNC_inner>的</FUNC_inner>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(換了|換過|改了|丟了|更換了|找了|接了|放了|當了|換上了|選了)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(做|作用|假作|假裝|冒充|創作|創造|喬裝|孕育|攝製|生出)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>換了</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>(<(MODIFIER|ModifierP)>也</(MODIFIER|ModifierP)>|<QUANTIFIER>都</QUANTIFIER>)<MODAL>[^<]+</MODAL>"
+        },
+        "誰打破了這個平衡誰就輸": {
+            "id": "6c7ea7dd-8796-441b-be48-0eae375de11c",
+            "pos": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><VerbP>打破了</VerbP><ENTITY_DetPhrase>這個</ENTITY_DetPhrase><ENTITY_nouny>平衡</ENTITY_nouny><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_inner>就</FUNC_inner><ACTION_verb>輸</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(打破了|扯破|破壞|破碎|破裂|砸破|突破|截斷|打斷|扣殺|折斷)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(輸|贏|輸給|有輸|有贏|輸了|贏過|吃虧|認輸|忌口|算輸)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>(.+)?<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>(<FUNC_inner>就</FUNC_inner>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>"
+        },
+        "隨機性即誰想做什麼就吃什麼": {
+            "id": "60b6e1fd-4ff8-4b50-9254-dacb07774c53",
+            "pos": "<MODIFIER>隨機</MODIFIER><MODIFIER>性</MODIFIER><FUNC_inter>即</FUNC_inter><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ACTION_verb>想做</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ><FUNC_inner>就</FUNC_inner><ACTION_verb>吃</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想做|得做|愛做|想幫|想當|想說|想寫|想找|辦不到|想看|想問)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(吃|吃掉|吸收|攝入|耗損|花掉|吃著|煮|啃|喝|吃了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>(<CLAUSE_WhatQ>什麼</CLAUSE_WhatQ>|<ENTITY_nouny>什麼</ENTITY_nouny>)(<FUNC_in(ner|ter)>就</FUNC_in(ner|ter)>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>(<CLAUSE_WhatQ>什麼</CLAUSE_WhatQ>|<ENTITY_nouny>什麼</ENTITY_nouny>)"
+        },
+        "任誰也知道這時候女孩還能發信": {
+            "id": "bc1218d1-1658-4412-a7ae-7be254778192",
+            "pos": "<ACTION_verb>任</ACTION_verb><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODIFIER>也</MODIFIER><ACTION_verb>知道</ACTION_verb><TIME_justtime>這時候</TIME_justtime><ENTITY_oov>女孩</ENTITY_oov><FUNC_inner>還</FUNC_inner><MODAL>能</MODAL><ACTION_verb>發信</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(任|任副|出任|任過|後任|任總|改任|兼任|擔任|復任|調任)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(知道|得知|明知|深知|獲知|知悉|知情|知曉|知足|確知|了解)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(發信|發函|發去|寄信|遞交|致電|打電話|發報|傳訊|送錢|寄出)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>任</(ACTION_verb|VerbP)><CLAUSE_WhoQ>誰</CLAUSE_WhoQ>(<(MODIFIER|ModifierP)>也</(MODIFIER|ModifierP)>|<QUANTIFIER>都</QUANTIFIER>)(<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>|<MODAL>[^<]+</MODAL>)"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}
