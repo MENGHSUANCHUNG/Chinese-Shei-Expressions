@@ -2,7 +2,7 @@
     "language": "zh-tw",
     "type": "advance",
     "version": {
-        "atk": "v271",
+        "atk": "v272",
         "intent": "1.0"
     },
     "user_defined": {
@@ -93,7 +93,7 @@
             "pattern": "<IDIOM>誰[^<]+誰[^<]+</IDIOM>"
         },
         "看誰能給得更多": {
-            "id": "f36ab4e6-69e1-474d-b85e-cc5f75ccf96d",
+            "id": "80e1fa68-3ce5-4ce3-957a-9a4dda5cf100",
             "pos": "<ACTION_verb>看</ACTION_verb><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODAL>能</MODAL><ACTION_verb>給</ACTION_verb><FUNC_inner>得</FUNC_inner><DegreeP>更多</DegreeP>",
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(看|探看|收看|看守|看戲|看望|看護|看顧|觀看|光顧|探望)</(ACTION_verb|VerbP)>",
@@ -131,7 +131,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(知道|得知|明知|深知|獲知|知悉|知情|知曉|知足|確知|了解)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(考|考驗|實驗|檢測|檢驗|測試|測驗|試作|試種|試驗|考試)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<(ACTION_verb|VerbP)>想</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>(知道|知)</(ACTION_verb|VerbP)><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><QUANTIFIER>都</QUANTIFIER>"
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<(ACTION_verb|VerbP)>想</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>(知道|知)</(ACTION_verb|VerbP)><CLAUSE_WhoQ>誰</CLAUSE_WhoQ>(<QUANTIFIER>都</QUANTIFIER>|<MODIFIER>也</MODIFIER>)"
         },
         "究竟是其中誰的貢獻了": {
             "id": "c99f207e-e32e-4df1-be0d-72a81b0e46fe",
@@ -149,14 +149,14 @@
             ],
             "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ACTION_lightVerb>[^<]+</ACTION_lightVerb>"
         },
-        "還有誰會來買本國的產品": {
-            "id": "8b443d12-5092-4558-8790-bf799b665843",
-            "pos": "<FUNC_conjunction>還有</FUNC_conjunction><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODAL>會</MODAL><ACTION_verb>來</ACTION_verb><ACTION_verb>買</ACTION_verb><ENTITY_nouny>本國</ENTITY_nouny><FUNC_inner>的</FUNC_inner><ENTITY_noun>產品</ENTITY_noun>",
+        "還有誰會來買本國的產品呢": {
+            "id": "af7aac56-ffbc-4a72-b4f8-2446c32958c6",
+            "pos": "<FUNC_conjunction>還有</FUNC_conjunction><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODAL>會</MODAL><ACTION_verb>來</ACTION_verb><ACTION_verb>買</ACTION_verb><ENTITY_nouny>本國</ENTITY_nouny><FUNC_inner>的</FUNC_inner><ENTITY_noun>產品</ENTITY_noun><CLAUSE_particle>呢</CLAUSE_particle>",
             "lexy": [
-                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(來|上來|下來|來到|前來|回來|進來|來語|端來|出來|值來)</(ACTION_verb|VerbP)>",
-                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(買|採買|收買|買進|購買|採辦|購得|買到|買不到|買東西|吃)</(ACTION_verb|VerbP)>"
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(來|上來|下來|來到|前來|回來|進來|值來|性來|出來|去)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(買|採買|收買|買進|購買|採辦|購得|買東西|吃|賣|買不起)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "<FUNC_conjunction>還有</FUNC_conjunction>(<ENTITY_nouny>誰</ENTITY_nouny>|<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>)"
+            "pattern": "<FUNC_conjunction>還有</FUNC_conjunction>(<ENTITY_nouny>誰</ENTITY_nouny>|<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>)(?:(?![嗎吧]).)*"
         },
         "那這樣你怎麼知道誰在愛你": {
             "id": "062f6c47-0a46-4c13-bec6-d6844ea13e25",
