@@ -119,7 +119,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
             resultDICT["response"] = getResponse(utterance, args)
         else:
             resultDICT["interrogative"].append("未來又由誰來決定接班的人呢")
-            if 'c3' not in resultDICT["intent"] and 'b4' not in resultDICT['intent']and 'b5' not in resultDICT['intent']:
+            if 'c3' not in resultDICT["intent"] and 'b4' not in resultDICT['intent']and 'b5' not in resultDICT['intent']and 'b6' not in resultDICT['intent']:
                 resultDICT["interrogative wh checker"] = True
                 resultDICT["intent"].append("a3")
 

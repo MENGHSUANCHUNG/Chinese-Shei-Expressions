@@ -60,7 +60,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("無論誰當權")
             
-            if 'a1' not in resultDICT["intent"] and 'a5' not in resultDICT["intent"] and 'a9' not in resultDICT["intent"] and 'a25' not in resultDICT["intent"]and 'a26' not in resultDICT["intent"]:
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("c3")
@@ -72,7 +72,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("誰也不敢動")
             
-            if 'a1' not in resultDICT["intent"] and 'a5' not in resultDICT["intent"] and 'a9' not in resultDICT["intent"] and 'a25' not in resultDICT["intent"]and 'a26' not in resultDICT["intent"]:
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("c1")
@@ -84,7 +84,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("誰也說不上來")
                  
-            if 'a1' not in resultDICT["intent"] and 'a5' not in resultDICT["intent"] and 'a9' not in resultDICT["intent"] and 'a25' not in resultDICT["intent"]and 'a26' not in resultDICT["intent"]:
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("c7")
@@ -96,7 +96,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("誰做好公民誰就是傻瓜")
             
-            if 'a1' not in resultDICT["intent"] and 'a5' not in resultDICT["intent"] and 'a9' not in resultDICT["intent"] and 'a25' not in resultDICT["intent"]and 'a26' not in resultDICT["intent"]:
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("c4")
@@ -108,7 +108,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("誰再出聲便處分誰")
             
-            if 'a1' not in resultDICT["intent"] and 'a5' not in resultDICT["intent"] and 'a9' not in resultDICT["intent"] and 'a25' not in resultDICT["intent"]and 'a26' not in resultDICT["intent"]:
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("c6")
@@ -120,7 +120,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("誰打破了這個平衡誰就輸")
                         
-            if 'a1' not in resultDICT["intent"] and 'a5' not in resultDICT["intent"] and 'a9' not in resultDICT["intent"]and 'a25' not in resultDICT["intent"]and 'b4' not in resultDICT["intent"]and 'a26' not in resultDICT["intent"]:
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["existential wh checker"] = False
@@ -133,7 +133,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("選誰來做都一樣可行")
             
-            if 'a1' not in resultDICT["intent"] and 'a5' not in resultDICT["intent"] and 'a9' not in resultDICT["intent"] and 'a25' not in resultDICT["intent"]and 'a26' not in resultDICT["intent"]:
+            if 'a1' not in resultDICT["intent"] or 'a5' not in resultDICT["intent"] or 'a9' not in resultDICT["intent"] or 'a25' not in resultDICT["intent"]or 'a26' not in resultDICT["intent"]:
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("c2")
@@ -145,7 +145,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("誰也聽不懂")
                        
-            if 'a1' not in resultDICT["intent"] and 'a5' not in resultDICT["intent"] and 'a9' not in resultDICT["intent"] and 'a25' not in resultDICT["intent"]and 'a26' not in resultDICT["intent"]:
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("c8")
@@ -157,7 +157,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("隨機性即誰想做什麼就吃什麼")
             
-            if 'a1' not in resultDICT["intent"] and 'a5' not in resultDICT["intent"] and 'a9' not in resultDICT["intent"] and 'a25' not in resultDICT["intent"]and 'a26' not in resultDICT["intent"]:
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("c9")
@@ -169,7 +169,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("老實說誰都綑不住我")
                  
-            if 'a1' not in resultDICT["intent"] and 'a5' not in resultDICT["intent"] and 'a9' not in resultDICT["intent"] and 'a25' not in resultDICT["intent"]and 'a26' not in resultDICT["intent"]:
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("c10")
@@ -181,7 +181,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("只要誰說有效我就帶他去")
             
-            if 'a1' not in resultDICT["intent"] and 'a5' not in resultDICT["intent"] and 'a9' not in resultDICT["intent"] and 'a25' not in resultDICT["intent"]and 'a26' not in resultDICT["intent"]:
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("c11")
@@ -194,7 +194,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("誰也難討好")
             
-            if 'a1' not in resultDICT["intent"] and 'a5' not in resultDICT["intent"] and 'a9' not in resultDICT["intent"] and 'a25' not in resultDICT["intent"]and 'a26' not in resultDICT["intent"]:
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("c12")
@@ -206,7 +206,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("再也沒有誰能聽得到了")
             
-            if 'a1' not in resultDICT["intent"] and 'a5' not in resultDICT["intent"] and 'a9' not in resultDICT["intent"] and 'a25' not in resultDICT["intent"]and 'a26' not in resultDICT["intent"]:
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("c13")
@@ -218,7 +218,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("換了我們誰也會這樣做的")
             
-            if 'a1' not in resultDICT["intent"] and 'a5' not in resultDICT["intent"] and 'a9' not in resultDICT["intent"] and 'a25' not in resultDICT["intent"]and 'a26' not in resultDICT["intent"]:
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("c14")
@@ -230,7 +230,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("任誰也知道這時候女孩還能發信")
             
-            if 'a1' not in resultDICT["intent"] and 'a5' not in resultDICT["intent"] and 'a9' not in resultDICT["intent"] and 'a25' not in resultDICT["intent"]and 'a26' not in resultDICT["intent"]:
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("c15")
@@ -242,7 +242,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("半夜誰起來就順便看一下")
             
-            if 'a1' not in resultDICT["intent"] and 'a5' not in resultDICT["intent"] and 'a9' not in resultDICT["intent"] and 'a25' not in resultDICT["intent"]and 'a26' not in resultDICT["intent"]:
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("c16")

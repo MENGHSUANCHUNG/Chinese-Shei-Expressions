@@ -299,7 +299,7 @@ def testIntent():
 
 if __name__ == "__main__":
         
-    inputLIST = ["連誰會來都不知道"]
+    inputLIST = ["還有誰會來都不確定"]
     
     for i, inputSTR in enumerate(inputLIST, start=1):  
         resultDICT = execLoki([inputSTR])
