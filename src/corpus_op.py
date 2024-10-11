@@ -24,9 +24,9 @@ def rm_marks(inputLIST):
 # 依 re 處理語料並寫入 _purged.txt 檔
 def sinica_purger(i, targetSTR):
     print('*** Now Processing："{}"... ***'.format(targetSTR)+"\n")
-    with open('../Corpus/purged/{}_sinica_purged.txt'.format(targetSTR), 'w') as g: # 新增空的 .txt 檔，若有相同檔案會將之清空
+    with open('../Corpus/purged/Universal_human_purged.txt'.format(targetSTR), 'w') as g: # 新增空的 .txt 檔，若有相同檔案會將之清空
         pass    
-    with open('../Corpus/raw/{}_sinica_raw.txt'.format(targetSTR),encoding="utf-8") as f: # 配合 sinica 格式將 raw 語料重新依 'more\n' 切分
+    with open('../Corpus/raw/Universal_human_raw.txt'.format(targetSTR),encoding="utf-8") as f: # 配合 sinica 格式將 raw 語料重新依 'more\n' 切分
         raw = ''.join(f.readlines())
         rawLIST = raw.split('more\n') 
         rawLIST = list(OrderedDict.fromkeys(rawLIST)) # 移除相同語料
@@ -40,7 +40,7 @@ def sinica_purger(i, targetSTR):
         print("{}. {} ==> {}".format(lineCount, j, purgeLIST)) # 此處將顯示 {句數}. {raw 語料} ==> {取出部分}
         lineCount += 1
     corpusLIST = list(OrderedDict.fromkeys(corpusLIST)) # 移除相同句子 
-    with open('../Corpus/purged/{}_sinica_purged.txt'.format(targetSTR),'a',encoding="utf-8") as g: # 將 corpusLIST 中的句子寫入 _purged.txt 檔
+    with open('../Corpus/purged/Universal_human_purged.txt'.format(targetSTR),'a',encoding="utf-8") as g: # 將 corpusLIST 中的句子寫入 _purged.txt 檔
         g.write("\n".join(corpusLIST))
         g.write("\n\n"+'"{}"：Total {} lines.'.format(targetSTR, len(corpusLIST))) # 計算總句數
         print("\n"+'"{}"：Total {} lines.'.format(targetSTR, len(corpusLIST)))

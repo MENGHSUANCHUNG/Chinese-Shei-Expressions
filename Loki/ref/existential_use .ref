@@ -2,7 +2,7 @@
     "language": "zh-tw",
     "type": "advance",
     "version": {
-        "atk": "v268",
+        "atk": "v272",
         "intent": "1.0"
     },
     "user_defined": {
@@ -27,11 +27,19 @@
             "lexy": [],
             "pattern": "(<ENTITY_DetPhrase>[^<]+</ENTITY_DetPhrase>|<FUNC_determiner>[^<]+</FUNC_determiner>)<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>"
         },
+        "誰在叫我嗎": {
+            "id": "a1a9cfdb-8ae6-43ee-9a15-e3079537527b",
+            "pos": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ASPECT>在</ASPECT><ACTION_verb>叫</ACTION_verb><ENTITY_pronoun>我</ENTITY_pronoun><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(叫|叫作|叫喊|呼叫|傳呼|傳見|召開|吆喝|呼召|嗔喝|宣告)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>(.+)?(<CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>|<CLAUSE_particle>吧</CLAUSE_particle>)"
+        },
         "彷彿生著誰的氣": {
             "id": "25c0f0af-596e-498e-835d-ae6669a7695c",
             "pos": "<UserDefined>彷彿</UserDefined><ENTITY_oov>生</ENTITY_oov><ASPECT>著</ASPECT><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_inner>的</FUNC_inner><ENTITY_nouny>氣</ENTITY_nouny>",
             "lexy": [],
-            "pattern": "(<FUNC_inter>(假如|如果)</FUNC_inter>|<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>彷彿</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>|<DegreeP>好像</DegreeP>|<AUX>像[^<]+</AUX>)(.+)?<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>"
+            "pattern": "(<FUNC_inter>(假如|如果)</FUNC_inter>|<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>彷彿</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>|<DegreeP>好像</DegreeP>|<AUX>像[^<]+</AUX>|<ACTION_verb>要</ACTION_verb><AUX>是</AUX>|<FUNC_inner>除非</FUNC_inner>|<MODIFIER>可能</MODIFIER>|<MODIFIER>只</MODIFIER><ACTION_verb>要</ACTION_verb>)(.+)?<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>"
         },
         "只要我是人家的誰": {
             "id": "be24083b-77f6-4f46-87e1-d76cf19ea778",
@@ -56,6 +64,14 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(記得|懂得|曉得|死記|熟記|牢記|記住|認得|謹記|識得|了解)</(ACTION_verb|VerbP)>"
             ],
             "pattern": "<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>(<AUX>是</AUX>)?(<ENTITY_DetPhrase>那個</ENTITY_DetPhrase>|<FUNC_determiner>那</FUNC_determiner>)?<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>(<FUNC_inner>的</FUNC_inner><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<CLAUSE_particle>呀</CLAUSE_particle>)"
+        },
+        "是不是誰掉了錢了": {
+            "id": "c47935d3-a69e-46e3-b5d5-2fff3e742711",
+            "pos": "<CLAUSE_AnotAQ>是不是</CLAUSE_AnotAQ><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><VerbP>掉了</VerbP><ENTITY_oov>錢</ENTITY_oov><ASPECT>了</ASPECT>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(掉了|掉|吞了|吃掉了|倒了|塞了|停了|丟了|跑掉|放了|退了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_AnotAQ>[^<]+</CLAUSE_AnotAQ>(.+)?<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>"
         },
         "沒有誰注意我存在": {
             "id": "4f6757e8-7f8e-4731-9cc7-e348b67d8044",

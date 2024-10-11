@@ -298,8 +298,9 @@ def testIntent():
 
 
 if __name__ == "__main__":
-        
-    inputLIST = ["還有誰會來都不確定"]
+    
+           
+    inputLIST = ["到底是誰會來都不知道"]
     
     for i, inputSTR in enumerate(inputLIST, start=1):  
         resultDICT = execLoki([inputSTR])
@@ -309,7 +310,7 @@ if __name__ == "__main__":
         print(f"existential wh checker：{resultDICT['existential wh checker']}")
         print(f"universal wh checker：{resultDICT['universal wh checker']}")            
         print("=======================================================================================================================================")    
-    
+           
 '''
     with open("../../log/log_P.txt", "w", encoding='utf-8') as log:
     
@@ -327,29 +328,29 @@ if __name__ == "__main__":
             log.write(f"interrogative wh checker：{resultDICT['interrogative wh checker']}\n")
             log.write(f"existential wh checker：{resultDICT['existential wh checker']}\n")
             log.write(f"universal wh checker：{resultDICT['universal wh checker']}\n")
-            
+          
         
 
     
-    
-    begin = 0
-    end = 2697
-    with open("../../Corpus/purged/shei_sinica_purged.txt", "r", encoding="utf-8") as f:
-        testLIST = f.readlines()
+   
+begin = 0
+end = 50
+with open("../../final_test/universal.txt", "r", encoding="utf-8") as f:
+    testLIST = f.readlines()
         
-    with open("../../log/log_0423.txt", "w", encoding='utf-8') as log:
-        for i, inputSTR in enumerate(testLIST[begin:end], start=begin+1):
-            resultDICT = execLoki(inputSTR)
-            if 'intent' in resultDICT.keys():
-                log.write(f"{i}. {resultDICT['intent']}\n")
-            else:
-                log.write(f"{i}. Missed\n")
+with open("../../final_test/universal_result.txt", "w", encoding='utf-8') as log:
+    for i, inputSTR in enumerate(testLIST[begin:end], start=begin+1):
+        resultDICT = execLoki(inputSTR)
+        if 'intent' in resultDICT.keys():
+            log.write(f"{i}. {resultDICT['intent']}\n")
+        else:
+            log.write(f"{i}. Missed\n")
 
-            print(f"{i}. {resultDICT}")
-            print("\n")
-            print(f"測試句：{resultDICT['測試句']}")
-            print(f"interrogative wh checker：{resultDICT['interrogative wh checker']}")
-            print(f"existential wh checker：{resultDICT['existential wh checker']}")
-            print(f"universal wh checker：{resultDICT['universal wh checker']}")            
-            print("=======================================================================================================================================")
+        print(f"{i}. {resultDICT}")
+        print("\n")
+        print(f"測試句：{resultDICT['測試句']}")
+        print(f"interrogative wh checker：{resultDICT['interrogative wh checker']}")
+        print(f"existential wh checker：{resultDICT['existential wh checker']}")
+        print(f"universal wh checker：{resultDICT['universal wh checker']}")            
+        print("=======================================================================================================================================")
 '''

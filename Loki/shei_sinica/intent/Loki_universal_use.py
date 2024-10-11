@@ -76,7 +76,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("c1")
-                resultDICT["intent"] = [item for item in resultDICT["intent"] if "a" not in item]
+                resultDICT["intent"] = [item for item in resultDICT["intent"] if "a" not in item]                
+                
 
     if utterance == "誰也說不上來":
         if CHATBOT_MODE:
@@ -108,11 +109,15 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("誰再出聲便處分誰")
             
-            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26', 'b6']): #b6 如果有誰敲門你就叫他進來
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("c6")
                 resultDICT["intent"] = [item for item in resultDICT["intent"] if "a" not in item]
+                if 'b6' in resultDICT['intent']:
+                    resultDICT["existential wh checker"] = True
+                    resultDICT["universal wh checker"] = False                
+                    resultDICT["intent"] = [item for item in resultDICT["intent"] if "c" not in item]                
 
     if utterance == "誰打破了這個平衡誰就輸":
         if CHATBOT_MODE:
@@ -126,6 +131,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
                 resultDICT["existential wh checker"] = False
                 resultDICT["intent"].append("c5")
                 resultDICT["intent"] = [item for item in resultDICT["intent"] if "a" not in item]
+                if 'b6' in resultDICT['intent']:                
+                    resultDICT["intent"] = [item for item in resultDICT["intent"] if "b" not in item]                 
 
     if utterance == "選誰來做都一樣可行":
         if CHATBOT_MODE:
@@ -133,9 +140,10 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["universal"].append("選誰來做都一樣可行")
             
-            if 'a1' not in resultDICT["intent"] or 'a5' not in resultDICT["intent"] or 'a9' not in resultDICT["intent"] or 'a25' not in resultDICT["intent"]or 'a26' not in resultDICT["intent"]:
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
                 resultDICT["universal wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
+                resultDICT["existential wh checker"] = False
                 resultDICT["intent"].append("c2")
                 resultDICT["intent"] = [item for item in resultDICT["intent"] if "a" not in item]
                 

@@ -210,15 +210,6 @@
             "pos": "<TIME_justtime>現在</TIME_justtime><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_conjunction>還有</FUNC_conjunction><ENTITY_noun>農業</ENTITY_noun><ENTITY_noun>時代</ENTITY_noun><FUNC_degreeHead>那麼</FUNC_degreeHead><FUNC_degreeHead>好</FUNC_degreeHead><FUNC_inner>的</FUNC_inner><ENTITY_nouny>耐心</ENTITY_nouny><FUNC_conjunction>和</FUNC_conjunction><MODIFIER>浪漫</MODIFIER><ENTITY_nounHead>情懷</ENTITY_nounHead>",
             "lexy": [],
             "pattern": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_conjunction>還有</FUNC_conjunction>"
-        },
-        "或是沒有能力去判斷候選人的政策究竟誰好誰壞": {
-            "id": "4a857397-401e-4885-aaf4-3bddba3e184b",
-            "pos": "<FUNC_conjunction>或是</FUNC_conjunction><FUNC_negation>沒有</FUNC_negation><ENTITY_nounHead>能力</ENTITY_nounHead><ACTION_verb>去</ACTION_verb><ACTION_verb>判斷</ACTION_verb><ENTITY_nouny>候選人</ENTITY_nouny><FUNC_inner>的</FUNC_inner><ENTITY_noun>政策</ENTITY_noun><MODIFIER>究竟</MODIFIER><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><FUNC_degreeHead>好</FUNC_degreeHead><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODIFIER>壞</MODIFIER>",
-            "lexy": [
-                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(去|要去|回去|想去|去了|跑去|回來|跑來|趕去|出去|來)</(ACTION_verb|VerbP)>",
-                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(判斷|判定|判決|斷定|研判|裁判|裁斷|評判|評斷|論斷|定奪)</(ACTION_verb|VerbP)>"
-            ],
-            "pattern": "<FUNC_conjunction>[^<]+</FUNC_conjunction><FUNC_negation>[^<]+</FUNC_negation><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>能力</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>去</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>判斷</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>候選人</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>政策</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<CLAUSE_WhoQ>[^<]+</CLAUSE_WhoQ><FUNC_degreeHead>[^<]+</FUNC_degreeHead><CLAUSE_WhoQ>[^<]+</CLAUSE_WhoQ>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?"
         }
     },
     "alias": {},

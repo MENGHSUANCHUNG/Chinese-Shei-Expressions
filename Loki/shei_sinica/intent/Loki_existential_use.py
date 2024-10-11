@@ -133,10 +133,34 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             resultDICT["existential"].append("只要我是人家的誰")
                        
-            if 'a1' not in resultDICT["intent"] and 'a5' not in resultDICT["intent"] and 'a9' not in resultDICT["intent"] and 'a25' not in resultDICT["intent"]and 'a26' not in resultDICT["intent"]:
-                resultDICT["universal wh checker"] = True
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
+                resultDICT["existential wh checker"] = True
                 resultDICT["interrogative wh checker"] = False
                 resultDICT["intent"].append("b7")
-                resultDICT["intent"] = [item for item in resultDICT["intent"] if "a" not in item]        
+                resultDICT["intent"] = [item for item in resultDICT["intent"] if "a" not in item]
+                
+    if utterance == "是不是誰掉了錢了":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT["existential"].append("是不是誰掉了錢了")
+                       
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
+                resultDICT["existential wh checker"] = True
+                resultDICT["interrogative wh checker"] = False
+                resultDICT["intent"].append("b8")
+                resultDICT["intent"] = [item for item in resultDICT["intent"] if "a" not in item]
+                
+    if utterance == "誰在叫我嗎":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT["existential"].append("誰在叫我嗎")
+                       
+            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
+                resultDICT["existential wh checker"] = True
+                resultDICT["interrogative wh checker"] = False
+                resultDICT["intent"].append("b9")
+                resultDICT["intent"] = [item for item in resultDICT["intent"] if "a" not in item]  
 
     return resultDICT
