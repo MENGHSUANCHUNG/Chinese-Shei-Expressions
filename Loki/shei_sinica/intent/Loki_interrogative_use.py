@@ -126,7 +126,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
             resultDICT["response"] = getResponse(utterance, args)
         else:
             resultDICT["interrogative"].append("票投給誰只有天知、地知、我知")
-            if 'b8' not in resultDICT["intent"] and 'b4' not in resultDICT["intent"]and 'b10' not in resultDICT["intent"]:
+            if 'b8' not in resultDICT["intent"] and 'b4' not in resultDICT["intent"] and 'b6' not in resultDICT["intent"] and 'b10' not in resultDICT["intent"]:
                 resultDICT["interrogative wh checker"] = True
                 resultDICT["intent"].append("a6")
 
@@ -302,6 +302,17 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
             resultDICT["universal wh checker"] = False
             resultDICT["interrogative"].append("我想知道誰都考第一名")
             resultDICT["intent"].append("a23")
+            resultDICT["intent"] = [item for item in resultDICT["intent"] if "c" not in item]
+            
+    if utterance == "誰什麼都吃":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT["interrogative wh checker"] = True
+            resultDICT["universal wh checker"] = False
+            resultDICT["interrogative"].append("誰什麼都吃")
+            resultDICT["intent"].append("a26")
             resultDICT["intent"] = [item for item in resultDICT["intent"] if "c" not in item]        
+        
             
     return resultDICT
