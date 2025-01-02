@@ -50,6 +50,7 @@ import json
 import math
 import os
 import re
+from time import sleep
 try:
     from intent import Loki_existential_use
     from intent import Loki_interrogative_use
@@ -299,18 +300,19 @@ def testIntent():
 
 if __name__ == "__main__":
     
-              
-    inputLIST = ["張三請了誰李四就請了誰"]
-    
+                  
+    inputLIST = ["張三打了誰"]
+
     for i, inputSTR in enumerate(inputLIST, start=1):  
         resultDICT = execLoki([inputSTR])
-        ##print(f"測試句：{resultDICT['測試句']}")
-        #print(f"{resultDICT['intent']}\n")
+        print(f"測試句：{resultDICT['測試句']}")
+        print(f"{resultDICT['intent']}\n")
         print(f"interrogative wh checker：{resultDICT['interrogative wh checker']}")
         print(f"existential wh checker：{resultDICT['existential wh checker']}")
         print(f"universal wh checker：{resultDICT['universal wh checker']}")            
         print("=======================================================================================================================================")
-'''
+
+r'''
     with open("../../log/log_P.txt", "w", encoding='utf-8') as log:
     
         for i, inputSTR in enumerate(inputLIST, start=1):  
@@ -333,13 +335,14 @@ if __name__ == "__main__":
     
    
 begin = 0
-end = 50
-with open("../../final_test/interrogative.txt", "r", encoding="utf-8") as f:
+end = 2697
+with open(r"C:\Users\User\Desktop\shei_test2\final_test\universal_2.txt", "r", encoding="utf-8") as f:
     testLIST = f.readlines()
         
-with open("../../final_test/interrogative_result.txt", "w", encoding='utf-8') as log:
+with open(r"C:\Users\User\Desktop\shei_test2\final_test\universal_2_result.txt", "w", encoding='utf-8') as log:
     for i, inputSTR in enumerate(testLIST[begin:end], start=begin+1):
         resultDICT = execLoki(inputSTR)
+        sleep(0.75)
         if 'intent' in resultDICT.keys():
             log.write(f"{i}. {resultDICT['intent']}\n")
         else:
