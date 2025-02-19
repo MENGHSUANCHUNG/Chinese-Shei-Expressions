@@ -301,7 +301,7 @@ def testIntent():
 if __name__ == "__main__":
     
                   
-    inputLIST = ["張三打了誰"]
+    inputLIST = ["知道誰和誰關係如何"]
 
     for i, inputSTR in enumerate(inputLIST, start=1):  
         resultDICT = execLoki([inputSTR])
