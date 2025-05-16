@@ -88,15 +88,6 @@
             ],
             "pattern": "^[^想知連問]*(?:(?![想知連問]).)*(<ENTITY_nouny>那誰</ENTITY_nouny>|<CLAUSE_WhoQ>誰</CLAUSE_WhoQ>|<ENTITY_oov>誰</ENTITY_oov>|<ENTITY_nounHead>誰</ENTITY_nounHead>|<ENTITY_nouny>誰</ENTITY_nouny>)(?!<TIME_[^>]*>)(?!<LOCATION>)[^每]*?<QUANTIFIER>[都皆]</QUANTIFIER>"
         },
-        "再也沒有誰能聽得到了": {
-            "id": "e13b2f25-89d2-4c8f-847c-b6eba7bdc0b2",
-            "pos": "<MODIFIER>再</MODIFIER><MODIFIER>也</MODIFIER><FUNC_negation>沒有</FUNC_negation><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODAL>能</MODAL><ACTION_verb>聽</ACTION_verb><FUNC_inner>得</FUNC_inner><VerbP>到了</VerbP>",
-            "lexy": [
-                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(聽|判處|嗔怨|嚴斥|指斥|聲討|聽著|聽老|傷假|聽完|視兒)</(ACTION_verb|VerbP)>",
-                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到了|到|到約|來到|來到了|到達了|到離|到為了|到臨|走到了|跑到)</(ACTION_verb|VerbP)>"
-            ],
-            "pattern": "<(MODIFIER|ModifierP)>再</(MODIFIER|ModifierP)><(MODIFIER|ModifierP)>也</(MODIFIER|ModifierP)><FUNC_negation>[^<]+</FUNC_negation><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><MODAL>[^<]+</MODAL>"
-        },
         "誰做好公民誰就是傻瓜": {
             "id": "4efb6ea0-e198-41af-84a0-a7d8d375f674",
             "pos": "<CLAUSE_WhoQ>誰</CLAUSE_WhoQ><ACTION_verb>做</ACTION_verb><ENTITY_nouny>好公民</ENTITY_nouny><CLAUSE_WhoQ>誰</CLAUSE_WhoQ><AUX>就是</AUX><ENTITY_nouny>傻瓜</ENTITY_nouny>",

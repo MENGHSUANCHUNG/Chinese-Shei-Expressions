@@ -212,20 +212,6 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
                 resultDICT["intent"].append("c12")
                 resultDICT["intent"] = [item for item in resultDICT["intent"] if "a" not in item]
                 resultDICT["intent"] = [item for item in resultDICT["intent"] if "b" not in item]
-    
-    if utterance == "再也沒有誰能聽得到了":
-        if CHATBOT_MODE:
-            resultDICT["response"] = getResponse(utterance, args)
-        else:
-            resultDICT["universal"].append("再也沒有誰能聽得到了")
-            
-            if all(x not in resultDICT["intent"] for x in ['a1', 'a5', 'a9', 'a25', 'a26']):
-                resultDICT["universal wh checker"] = True
-                resultDICT["interrogative wh checker"] = False
-                resultDICT["existential wh checker"] = False
-                resultDICT["intent"].append("c13")
-                resultDICT["intent"] = [item for item in resultDICT["intent"] if "a" not in item]
-                resultDICT["intent"] = [item for item in resultDICT["intent"] if "b" not in item]
                 
                 
     if utterance == "換了我們誰也會這樣做的":   
